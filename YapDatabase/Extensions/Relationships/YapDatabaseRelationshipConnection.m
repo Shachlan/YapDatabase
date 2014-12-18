@@ -307,7 +307,7 @@
 	*hasDiskChangesPtr = hasDiskChanges;
 }
 
-- (void)processChangeset:(NSDictionary *)changeset
+- (void)processChangeset:(NSDictionary __unused *)changeset
 {
 	YDBLogAutoTrace();
 	
