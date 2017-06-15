@@ -6808,7 +6808,7 @@ NS_INLINE BOOL URLMatchesURL(NSURL *url1, NSURL *url2)
 	                                 collection:sourceCollection
 	                             destinationKey:destinationKey
 	                                 collection:destinationCollection
-	                            nodeDeleteRules:0];
+	                            nodeDeleteRules:(YDB_NodeDeleteRules)0];
 	
 	[self removeEdge:edge withProcessing:reason];
 }

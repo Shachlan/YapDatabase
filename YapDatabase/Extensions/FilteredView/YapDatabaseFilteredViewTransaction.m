@@ -867,7 +867,8 @@
 	
 	YapDatabaseBlockInvoke blockInvokeBitMask = YapDatabaseBlockInvokeOnInsertOnly;
 	
-	YapDatabaseViewChangesBitMask changesBitMask = YapDatabaseViewChangedObject | YapDatabaseViewChangedMetadata;
+	YapDatabaseViewChangesBitMask changesBitMask =
+		(YapDatabaseViewChangesBitMask)(YapDatabaseViewChangedObject | YapDatabaseViewChangedMetadata);
 	
 	YapDatabaseViewFiltering *filtering = nil;
 	[filteredViewConnection getFiltering:&filtering];
@@ -897,10 +898,11 @@
 	__unsafe_unretained YapDatabaseFilteredViewConnection *filteredViewConnection =
 	  (YapDatabaseFilteredViewConnection *)parentConnection;
 	
-	YapDatabaseBlockInvoke blockInvokeBitMask = YapDatabaseBlockInvokeIfObjectModified |
-	                                            YapDatabaseBlockInvokeIfMetadataModified;
+	YapDatabaseBlockInvoke blockInvokeBitMask =
+		(YapDatabaseBlockInvoke)(YapDatabaseBlockInvokeIfObjectModified | YapDatabaseBlockInvokeIfMetadataModified);
 	
-	YapDatabaseViewChangesBitMask changesBitMask = YapDatabaseViewChangedObject | YapDatabaseViewChangedMetadata;
+	YapDatabaseViewChangesBitMask changesBitMask =
+		(YapDatabaseViewChangesBitMask)(YapDatabaseViewChangedObject | YapDatabaseViewChangedMetadata);
 	
 	YapDatabaseViewFiltering *filtering = nil;
 	[filteredViewConnection getFiltering:&filtering];
@@ -1112,9 +1114,11 @@
 	  (YapDatabaseFilteredViewConnection *)parentConnection;
 	
 	YapDatabaseBlockInvoke blockInvokeBitMask =
-	  YapDatabaseBlockInvokeIfObjectTouched | YapDatabaseBlockInvokeIfMetadataTouched;
+		(YapDatabaseBlockInvoke)(YapDatabaseBlockInvokeIfObjectTouched |
+                             YapDatabaseBlockInvokeIfMetadataTouched);
 	
-	YapDatabaseViewChangesBitMask changesBitMask = YapDatabaseViewChangedObject | YapDatabaseViewChangedMetadata;
+	YapDatabaseViewChangesBitMask changesBitMask =
+		(YapDatabaseViewChangesBitMask)(YapDatabaseViewChangedObject | YapDatabaseViewChangedMetadata);
 	
 	YapDatabaseViewFiltering *filtering = nil;
 	[filteredViewConnection getFiltering:&filtering];

@@ -3711,8 +3711,8 @@ static int connectionBusyHandler(void *ptr, int count)
  * 
  * @see processChangeset:
 **/
-- (void)getInternalChangeset:(NSMutableDictionary **)internalChangesetPtr
-           externalChangeset:(NSMutableDictionary **)externalChangesetPtr
+- (void)getInternalChangeset:(NSMutableDictionary * __autoreleasing *)internalChangesetPtr
+           externalChangeset:(NSMutableDictionary * __autoreleasing *)externalChangesetPtr
 {
 	// Step 1 of 2 - Process extensions
 	//
